@@ -8,20 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		953C6C38205E585200BF24A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C6C37205E585200BF24A4 /* AppDelegate.swift */; };
-		953C6C3A205E585200BF24A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C6C39205E585200BF24A4 /* ViewController.swift */; };
 		953C6C3D205E585200BF24A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953C6C3B205E585200BF24A4 /* Main.storyboard */; };
 		953C6C3F205E585200BF24A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 953C6C3E205E585200BF24A4 /* Assets.xcassets */; };
 		953C6C42205E585200BF24A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953C6C40205E585200BF24A4 /* LaunchScreen.storyboard */; };
+		953C6C4A205EB67300BF24A4 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C6C49205EB67300BF24A4 /* StartViewController.swift */; };
+		953C6C4C205EB6AA00BF24A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C6C4B205EB6AA00BF24A4 /* LoginViewController.swift */; };
+		953C6C4E205EB6BA00BF24A4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C6C4D205EB6BA00BF24A4 /* RegistrationViewController.swift */; };
+		953C6C50205EBC6E00BF24A4 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C6C4F205EBC6E00BF24A4 /* ApiManager.swift */; };
+		95AD842120604B2F00318396 /* AppStoryboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD842020604B2F00318396 /* AppStoryboards.swift */; };
+		95AD842320604B4C00318396 /* ViewControllerInitiateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD842220604B4C00318396 /* ViewControllerInitiateExtension.swift */; };
+		95AD8426206054EA00318396 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD8425206054EA00318396 /* BookViewController.swift */; };
+		95AD8428206054F100318396 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD8427206054F100318396 /* NewViewController.swift */; };
+		95AD842A206054FC00318396 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD8429206054FC00318396 /* ForYouViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		953C6C34205E585200BF24A4 /* SoulCloudiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoulCloudiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		953C6C37205E585200BF24A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		953C6C39205E585200BF24A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		953C6C3C205E585200BF24A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		953C6C3E205E585200BF24A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		953C6C41205E585200BF24A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		953C6C43205E585200BF24A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		953C6C49205EB67300BF24A4 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		953C6C4B205EB6AA00BF24A4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		953C6C4D205EB6BA00BF24A4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		953C6C4F205EBC6E00BF24A4 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		95AD842020604B2F00318396 /* AppStoryboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboards.swift; sourceTree = "<group>"; };
+		95AD842220604B4C00318396 /* ViewControllerInitiateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInitiateExtension.swift; sourceTree = "<group>"; };
+		95AD8425206054EA00318396 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		95AD8427206054F100318396 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		95AD8429206054FC00318396 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +70,62 @@
 		953C6C36205E585200BF24A4 /* SoulCloudiOS */ = {
 			isa = PBXGroup;
 			children = (
+				95AD841F20604AEA00318396 /* Helpers */,
+				95AD841E20604ADA00318396 /* Extensions */,
+				95AD841D20604AB900318396 /* ApiManager */,
+				95AD841C20604A9E00318396 /* ViewControllers */,
 				953C6C37205E585200BF24A4 /* AppDelegate.swift */,
-				953C6C39205E585200BF24A4 /* ViewController.swift */,
 				953C6C3B205E585200BF24A4 /* Main.storyboard */,
 				953C6C3E205E585200BF24A4 /* Assets.xcassets */,
 				953C6C40205E585200BF24A4 /* LaunchScreen.storyboard */,
 				953C6C43205E585200BF24A4 /* Info.plist */,
 			);
 			path = SoulCloudiOS;
+			sourceTree = "<group>";
+		};
+		95AD841C20604A9E00318396 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				95AD8424206054D000318396 /* TabBarControllers */,
+				953C6C4B205EB6AA00BF24A4 /* LoginViewController.swift */,
+				953C6C4D205EB6BA00BF24A4 /* RegistrationViewController.swift */,
+				953C6C49205EB67300BF24A4 /* StartViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		95AD841D20604AB900318396 /* ApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				953C6C4F205EBC6E00BF24A4 /* ApiManager.swift */,
+			);
+			path = ApiManager;
+			sourceTree = "<group>";
+		};
+		95AD841E20604ADA00318396 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				95AD842220604B4C00318396 /* ViewControllerInitiateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		95AD841F20604AEA00318396 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				95AD842020604B2F00318396 /* AppStoryboards.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		95AD8424206054D000318396 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				95AD8425206054EA00318396 /* BookViewController.swift */,
+				95AD8427206054F100318396 /* NewViewController.swift */,
+				95AD8429206054FC00318396 /* ForYouViewController.swift */,
+			);
+			path = TabBarControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +200,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				953C6C3A205E585200BF24A4 /* ViewController.swift in Sources */,
+				953C6C4C205EB6AA00BF24A4 /* LoginViewController.swift in Sources */,
 				953C6C38205E585200BF24A4 /* AppDelegate.swift in Sources */,
+				95AD842120604B2F00318396 /* AppStoryboards.swift in Sources */,
+				953C6C4A205EB67300BF24A4 /* StartViewController.swift in Sources */,
+				953C6C50205EBC6E00BF24A4 /* ApiManager.swift in Sources */,
+				95AD8426206054EA00318396 /* BookViewController.swift in Sources */,
+				95AD8428206054F100318396 /* NewViewController.swift in Sources */,
+				95AD842320604B4C00318396 /* ViewControllerInitiateExtension.swift in Sources */,
+				95AD842A206054FC00318396 /* ForYouViewController.swift in Sources */,
+				953C6C4E205EB6BA00BF24A4 /* RegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
