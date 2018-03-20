@@ -10,15 +10,23 @@ import UIKit
 
 class BookTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var bookImage: UIImageView!
+    @IBOutlet weak var bookName: UILabel!
+    @IBOutlet weak var bookAuthor: UILabel!
+    @IBOutlet weak var bookContent: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
+    
+    func prepare(with book: Book){
+        bookName.text = book.name
+        bookAuthor.text = book.author
+        bookContent.text = book.description
     }
     
 }

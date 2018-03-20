@@ -20,6 +20,7 @@
 		95AD8426206054EA00318396 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD8425206054EA00318396 /* BookViewController.swift */; };
 		95AD8428206054F100318396 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD8427206054F100318396 /* NewViewController.swift */; };
 		95AD842A206054FC00318396 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD8429206054FC00318396 /* ForYouViewController.swift */; };
+		FFB0E4262061ABDE00ABA83C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0E4252061ABDE00ABA83C /* Book.swift */; };
 		FFE237A620607BFC00742CC1 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE237A420607BFC00742CC1 /* BookTableViewCell.swift */; };
 		FFE237A720607BFC00742CC1 /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE237A520607BFC00742CC1 /* BookTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		95AD8425206054EA00318396 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		95AD8427206054F100318396 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		95AD8429206054FC00318396 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
+		FFB0E4252061ABDE00ABA83C /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		FFE237A420607BFC00742CC1 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		FFE237A520607BFC00742CC1 /* BookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 		953C6C36205E585200BF24A4 /* SoulCloudiOS */ = {
 			isa = PBXGroup;
 			children = (
+				FFB0E4242061ABC600ABA83C /* Entities */,
 				FFE237A320607B9500742CC1 /* CustomCells */,
 				95AD841F20604AEA00318396 /* Helpers */,
 				95AD841E20604ADA00318396 /* Extensions */,
@@ -131,6 +134,14 @@
 				95AD8429206054FC00318396 /* ForYouViewController.swift */,
 			);
 			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		FFB0E4242061ABC600ABA83C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FFB0E4252061ABDE00ABA83C /* Book.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		FFE237A320607B9500742CC1 /* CustomCells */ = {
@@ -223,6 +234,7 @@
 				953C6C50205EBC6E00BF24A4 /* ApiManager.swift in Sources */,
 				95AD8426206054EA00318396 /* BookViewController.swift in Sources */,
 				95AD8428206054F100318396 /* NewViewController.swift in Sources */,
+				FFB0E4262061ABDE00ABA83C /* Book.swift in Sources */,
 				95AD842320604B4C00318396 /* ViewControllerInitiateExtension.swift in Sources */,
 				95AD842A206054FC00318396 /* ForYouViewController.swift in Sources */,
 				953C6C4E205EB6BA00BF24A4 /* RegistrationViewController.swift in Sources */,

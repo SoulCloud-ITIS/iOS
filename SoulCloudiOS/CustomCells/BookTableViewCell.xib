@@ -68,7 +68,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="34" y="83"/>
+            <connections>
+                <outlet property="bookAuthor" destination="RZs-3P-iuP" id="e12-u7-xUV"/>
+                <outlet property="bookContent" destination="o8F-Yh-eDR" id="LpZ-mf-0yo"/>
+                <outlet property="bookImage" destination="zPh-Ye-B6b" id="5m4-F1-uFb"/>
+                <outlet property="bookName" destination="Cs2-eC-THl" id="1Ca-c2-LbI"/>
+            </connections>
+            <point key="canvasLocation" x="-416" y="60"/>
         </tableViewCell>
     </objects>
     <resources>
