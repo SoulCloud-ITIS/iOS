@@ -20,6 +20,9 @@
 		95AD8426206054EA00318396 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD8425206054EA00318396 /* BookViewController.swift */; };
 		95AD8428206054F100318396 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD8427206054F100318396 /* NewViewController.swift */; };
 		95AD842A206054FC00318396 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD8429206054FC00318396 /* ForYouViewController.swift */; };
+		95AD844E206169EB00318396 /* SelectGenresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD844D206169EB00318396 /* SelectGenresViewController.swift */; };
+		95AD845220616E6100318396 /* AlertFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD845120616E6100318396 /* AlertFactoryProtocol.swift */; };
+		95AD845420616E6800318396 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD845320616E6800318396 /* AlertFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		95AD8425206054EA00318396 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		95AD8427206054F100318396 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		95AD8429206054FC00318396 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
+		95AD844D206169EB00318396 /* SelectGenresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGenresViewController.swift; sourceTree = "<group>"; };
+		95AD845120616E6100318396 /* AlertFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFactoryProtocol.swift; sourceTree = "<group>"; };
+		95AD845320616E6800318396 /* AlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 				953C6C4B205EB6AA00BF24A4 /* LoginViewController.swift */,
 				953C6C4D205EB6BA00BF24A4 /* RegistrationViewController.swift */,
 				953C6C49205EB67300BF24A4 /* StartViewController.swift */,
+				95AD844D206169EB00318396 /* SelectGenresViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 		95AD841F20604AEA00318396 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				95AD845020616E4300318396 /* AlertFactory */,
 				95AD842020604B2F00318396 /* AppStoryboards.swift */,
 			);
 			path = Helpers;
@@ -126,6 +134,15 @@
 				95AD8429206054FC00318396 /* ForYouViewController.swift */,
 			);
 			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		95AD845020616E4300318396 /* AlertFactory */ = {
+			isa = PBXGroup;
+			children = (
+				95AD845120616E6100318396 /* AlertFactoryProtocol.swift */,
+				95AD845320616E6800318396 /* AlertFactory.swift */,
+			);
+			path = AlertFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,11 +217,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95AD845420616E6800318396 /* AlertFactory.swift in Sources */,
 				953C6C4C205EB6AA00BF24A4 /* LoginViewController.swift in Sources */,
 				953C6C38205E585200BF24A4 /* AppDelegate.swift in Sources */,
 				95AD842120604B2F00318396 /* AppStoryboards.swift in Sources */,
+				95AD845220616E6100318396 /* AlertFactoryProtocol.swift in Sources */,
 				953C6C4A205EB67300BF24A4 /* StartViewController.swift in Sources */,
 				953C6C50205EBC6E00BF24A4 /* ApiManager.swift in Sources */,
+				95AD844E206169EB00318396 /* SelectGenresViewController.swift in Sources */,
 				95AD8426206054EA00318396 /* BookViewController.swift in Sources */,
 				95AD8428206054F100318396 /* NewViewController.swift in Sources */,
 				95AD842320604B4C00318396 /* ViewControllerInitiateExtension.swift in Sources */,
