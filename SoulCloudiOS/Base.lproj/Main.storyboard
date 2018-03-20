@@ -211,18 +211,37 @@
         <!--Book-->
         <scene sceneID="7Nk-Ak-UUr">
             <objects>
-                <viewController storyboardIdentifier="BookViewController" title="Book" id="Rf5-ef-6mt" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookViewController" title="Book" id="Rf5-ef-6mt" customClass="BookViewController" customModule="SoulCloudiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ipp-VR-Z7p">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pkh-y7-jwr">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rf5-ef-6mt" id="F5b-uW-FfG"/>
+                                    <outlet property="delegate" destination="Rf5-ef-6mt" id="iMl-uN-BF2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZFq-bB-It0" firstAttribute="trailing" secondItem="pkh-y7-jwr" secondAttribute="trailing" id="3Iu-A7-TBc"/>
+                            <constraint firstItem="pkh-y7-jwr" firstAttribute="leading" secondItem="ZFq-bB-It0" secondAttribute="leading" id="RUZ-Cq-CZO"/>
+                            <constraint firstItem="ZFq-bB-It0" firstAttribute="bottom" secondItem="pkh-y7-jwr" secondAttribute="bottom" id="Vbq-Wb-XLO"/>
+                            <constraint firstItem="pkh-y7-jwr" firstAttribute="top" secondItem="ZFq-bB-It0" secondAttribute="top" id="olP-oX-5Hq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZFq-bB-It0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Book" id="QuH-iK-U5x"/>
+                    <connections>
+                        <outlet property="tableView" destination="pkh-y7-jwr" id="4KV-VX-okT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BW6-Dx-JVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3938" y="-110"/>
+            <point key="canvasLocation" x="3937.5" y="-110.91549295774648"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fKO-0n-5FU">
