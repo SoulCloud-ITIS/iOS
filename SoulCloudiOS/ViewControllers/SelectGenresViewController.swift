@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BEMCheckBox
 
 struct Genre {
     let id: Int
@@ -88,20 +89,23 @@ class SelectGenresViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! GenresTableViewCell
 
         cell.textLabel?.text = genresArray[indexPath.row].name
-
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.none {
-            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+        
+        let cell = tableView.cellForRow(at: indexPath) as! GenresTableViewCell
+        if cell.checkBox.on == false {
+            cell.checkBox.setOn(true, animated: true)
             genresArray[indexPath.row].isSelected = true
+            print(genresArray[indexPath.row].name,  genresArray[indexPath.row].isSelected)
         } else {
-            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+            cell.checkBox.setOn(false, animated: true)
             genresArray[indexPath.row].isSelected = false
+            print(genresArray[indexPath.row].name,  genresArray[indexPath.row].isSelected)
         }
     }
 }

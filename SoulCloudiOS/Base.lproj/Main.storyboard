@@ -203,17 +203,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHs-ms-rFx">
                                 <rect key="frame" x="16" y="66" width="288" height="436"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pus-rJ-3Jf">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pus-rJ-3Jf">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="382"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="tmo-vY-42h">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="tmo-vY-42h" customClass="GenresTableViewCell" customModule="SoulCloudiOS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="288" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tmo-vY-42h" id="V5P-ka-Cnt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ch-9z-VXZ" customClass="BEMCheckBox">
+                                                            <rect key="frame" x="244" y="7" width="29" height="29"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="1Ch-9z-VXZ" secondAttribute="trailing" constant="15" id="9Ll-wJ-2Ua"/>
+                                                        <constraint firstItem="1Ch-9z-VXZ" firstAttribute="top" secondItem="V5P-ka-Cnt" secondAttribute="top" constant="7" id="H0W-w9-wK3"/>
+                                                        <constraint firstAttribute="bottom" secondItem="1Ch-9z-VXZ" secondAttribute="bottom" constant="7.5" id="T0B-38-PAc"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="checkBox" destination="1Ch-9z-VXZ" id="fwM-G9-NiM"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
