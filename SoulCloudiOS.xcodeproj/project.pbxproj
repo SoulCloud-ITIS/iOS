@@ -177,6 +177,7 @@
 				FFE237A520607BFC00742CC1 /* BookTableViewCell.xib */,
 			);
 			path = CustomCells;
+		};
 		95AD845020616E4300318396 /* AlertFactory */ = {
 			isa = PBXGroup;
 			children = (
