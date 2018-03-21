@@ -276,18 +276,47 @@
         <!--For You-->
         <scene sceneID="P6E-qg-wxD">
             <objects>
-                <viewController title="For You" id="ZEA-7n-rwS" sceneMemberID="viewController">
+                <viewController title="For You" id="ZEA-7n-rwS" customClass="ForYouViewController" customModule="SoulCloudiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c6b-9r-Pqr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LXl-h7-NRO">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recomendationCell" id="ckN-z8-RlI" customClass="BookTableViewCell" customModule="SoulCloudiOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ckN-z8-RlI" id="dk4-Dg-gza">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZEA-7n-rwS" id="ouu-Lg-JQv"/>
+                                    <outlet property="delegate" destination="ZEA-7n-rwS" id="GeO-GB-IeI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LXl-h7-NRO" firstAttribute="bottom" secondItem="G5E-q2-flS" secondAttribute="bottom" id="081-OC-tEq"/>
+                            <constraint firstItem="LXl-h7-NRO" firstAttribute="top" secondItem="G5E-q2-flS" secondAttribute="top" id="2a5-aa-xmB"/>
+                            <constraint firstItem="LXl-h7-NRO" firstAttribute="leading" secondItem="G5E-q2-flS" secondAttribute="leading" id="Dqx-NY-Hqd"/>
+                            <constraint firstItem="LXl-h7-NRO" firstAttribute="trailing" secondItem="G5E-q2-flS" secondAttribute="trailing" id="ZoJ-pB-Qbu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="G5E-q2-flS"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="For You" id="gG8-Cf-W9x"/>
+                    <connections>
+                        <outlet property="tableView" destination="LXl-h7-NRO" id="uYw-os-SFt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bY1-Rb-5qQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3938" y="731"/>
+            <point key="canvasLocation" x="3937.5" y="730.9859154929577"/>
         </scene>
         <!--Book-->
         <scene sceneID="7Nk-Ak-UUr">

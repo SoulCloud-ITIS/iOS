@@ -21,13 +21,12 @@
 		95AD8426206054EA00318396 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD8425206054EA00318396 /* BookViewController.swift */; };
 		95AD8428206054F100318396 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD8427206054F100318396 /* NewViewController.swift */; };
 		95AD842A206054FC00318396 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD8429206054FC00318396 /* ForYouViewController.swift */; };
-		FFB0E4262061ABDE00ABA83C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0E4252061ABDE00ABA83C /* Book.swift */; };
-		FFE237A620607BFC00742CC1 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE237A420607BFC00742CC1 /* BookTableViewCell.swift */; };
-		FFE237A720607BFC00742CC1 /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE237A520607BFC00742CC1 /* BookTableViewCell.xib */; };
 		95AD844E206169EB00318396 /* SelectGenresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD844D206169EB00318396 /* SelectGenresViewController.swift */; };
 		95AD845220616E6100318396 /* AlertFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD845120616E6100318396 /* AlertFactoryProtocol.swift */; };
 		95AD845420616E6800318396 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD845320616E6800318396 /* AlertFactory.swift */; };
 		95AD84562061AD2700318396 /* GenresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD84552061AD2700318396 /* GenresTableViewCell.swift */; };
+		95AD845A2062F1F200318396 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD84592062F11C00318396 /* BookTableViewCell.swift */; };
+		FFB0E4262061ABDE00ABA83C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0E4252061ABDE00ABA83C /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,15 +46,15 @@
 		95AD8425206054EA00318396 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		95AD8427206054F100318396 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		95AD8429206054FC00318396 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
-		FFB0E4252061ABDE00ABA83C /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		FFE237A420607BFC00742CC1 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
-		FFE237A520607BFC00742CC1 /* BookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
 		95AD844D206169EB00318396 /* SelectGenresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGenresViewController.swift; sourceTree = "<group>"; };
 		95AD845120616E6100318396 /* AlertFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFactoryProtocol.swift; sourceTree = "<group>"; };
 		95AD845320616E6800318396 /* AlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
 		95AD84552061AD2700318396 /* GenresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresTableViewCell.swift; sourceTree = "<group>"; };
+		95AD84582062F11C00318396 /* BookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BookTableViewCell.xib; path = SoulCloudiOS/TableViewCells/BookTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		95AD84592062F11C00318396 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookTableViewCell.swift; path = SoulCloudiOS/TableViewCells/BookTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		A25F070CDEF00FDDEE9BD724 /* Pods-SoulCloudiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulCloudiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoulCloudiOS/Pods-SoulCloudiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A4E99C34268527FFD359AF90 /* Pods_SoulCloudiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoulCloudiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFB0E4252061ABDE00ABA83C /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				FFB0E4242061ABC600ABA83C /* Entities */,
-				FFE237A320607B9500742CC1 /* CustomCells */,
 				95AD84572061AD2C00318396 /* TableViewCells */,
 				95AD841F20604AEA00318396 /* Helpers */,
 				95AD841E20604ADA00318396 /* Extensions */,
@@ -162,21 +160,6 @@
 			path = TabBarControllers;
 			sourceTree = "<group>";
 		};
-		FFB0E4242061ABC600ABA83C /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				FFB0E4252061ABDE00ABA83C /* Book.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		FFE237A320607B9500742CC1 /* CustomCells */ = {
-			isa = PBXGroup;
-			children = (
-				FFE237A420607BFC00742CC1 /* BookTableViewCell.swift */,
-				FFE237A520607BFC00742CC1 /* BookTableViewCell.xib */,
-			);
-			path = CustomCells;
 		95AD845020616E4300318396 /* AlertFactory */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +172,8 @@
 		95AD84572061AD2C00318396 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				95AD84592062F11C00318396 /* BookTableViewCell.swift */,
+				95AD84582062F11C00318396 /* BookTableViewCell.xib */,
 				95AD84552061AD2700318396 /* GenresTableViewCell.swift */,
 			);
 			path = TableViewCells;
@@ -201,6 +186,14 @@
 				6978F1802D5137A7F4774EC8 /* Pods-SoulCloudiOS.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FFB0E4242061ABC600ABA83C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FFB0E4252061ABDE00ABA83C /* Book.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +258,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFE237A720607BFC00742CC1 /* BookTableViewCell.xib in Resources */,
 				953C6C42205E585200BF24A4 /* LaunchScreen.storyboard in Resources */,
 				953C6C3F205E585200BF24A4 /* Assets.xcassets in Resources */,
 				953C6C3D205E585200BF24A4 /* Main.storyboard in Resources */,
@@ -333,11 +325,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95AD845A2062F1F200318396 /* BookTableViewCell.swift in Sources */,
 				95AD845420616E6800318396 /* AlertFactory.swift in Sources */,
 				953C6C4C205EB6AA00BF24A4 /* LoginViewController.swift in Sources */,
 				953C6C38205E585200BF24A4 /* AppDelegate.swift in Sources */,
 				95AD842120604B2F00318396 /* AppStoryboards.swift in Sources */,
-				FFE237A620607BFC00742CC1 /* BookTableViewCell.swift in Sources */,
 				95AD845220616E6100318396 /* AlertFactoryProtocol.swift in Sources */,
 				953C6C4A205EB67300BF24A4 /* StartViewController.swift in Sources */,
 				953C6C50205EBC6E00BF24A4 /* ApiManager.swift in Sources */,

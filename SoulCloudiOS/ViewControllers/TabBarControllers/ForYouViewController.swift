@@ -8,28 +8,50 @@
 
 import UIKit
 
-class ForYouViewController: UIViewController {
-
+class ForYouViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+   
+    @IBOutlet weak var tableView: UITableView!
+    let bookCellIdentifier = "recomendationCell"
+    var books = [Book]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        registerCell()
+        getBookByGenres()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func getBookByGenres() {
+        books.removeAll()
+        ApiManager.instance.getRecomendedBookByGenres { (currentBooks) in
+            for book in currentBooks {
+                let newBook = Book(id: book.id, name: book.name, author: book.author, description: book.description, mark: book.mark, url: book.url)
+                self.books.append(newBook)
+            }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
-    */
+    
+     //MARK: - Cells Registration
+    private func registerCell() {
+        let newsCellNib = UINib(nibName: "BookTableViewCell", bundle: nil)
+        self.tableView.register(newsCellNib, forCellReuseIdentifier: bookCellIdentifier)
+    }
 
+    //MARK: - Table View Methods
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return books.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: bookCellIdentifier, for: indexPath)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
 }

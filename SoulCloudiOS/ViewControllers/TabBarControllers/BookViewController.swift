@@ -28,7 +28,7 @@ class BookViewController: UIViewController, UITableViewDelegate, UITableViewData
         books.removeAll()
         ApiManager.instance.loadingOfBooks { (currentBooks) in
             for book in currentBooks {
-                let newBook = Book(id: book.id, name: book.name, author: book.author, description: book.description, mark: book.mark)
+                let newBook = Book(id: book.id, name: book.name, author: book.author, description: book.description, mark: book.mark, url: book.url)
                 self.books.append(newBook)
             }
             DispatchQueue.main.async {

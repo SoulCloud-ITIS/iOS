@@ -97,6 +97,8 @@ class ApiManager {
                 
             }
         }.resume()
+    }
+        
     func addGenreToUser(with genreId: Int, completionBlock: @escaping (Int,String,Bool) -> ()) {
         guard let url = URL(string: "https://soul-cloud-api.herokuapp.com/genres/\(genreId)/\(userToken)") else { return }
         var request = URLRequest(url: url)
@@ -121,6 +123,30 @@ class ApiManager {
                 print(json)
             } catch let errorMessage2 {
                 print(errorMessage2.localizedDescription)
+            }
+            }.resume()
+        }
+    
+    func getRecomendedBookByGenres(comlitionBlock: @escaping ([Book]) -> ()){
+        guard let url = URL(string: "https://soul-cloud-api.herokuapp.com/books/genres/recommend/1/\(userToken)") else { return }
+        
+        let session = URLSession.shared
+        session.dataTask(with: url) { (data, response, error) in
+            
+            if  (error != nil ) {
+                print("Error: \(String(describing: error?.localizedDescription))")
+            } else {
+                guard let data = data else { return }
+                let dataString = String(data: data, encoding: .utf8)
+                print(dataString)
+                do {
+                    let booksDictionary = try JSONDecoder().decode([Book].self, from: data)
+                    print("Data \(String(describing: booksDictionary))")
+                    comlitionBlock(booksDictionary)
+                } catch let errorMessage {
+                    print(errorMessage.localizedDescription)
+                }
+                
             }
             }.resume()
     }
