@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="BookTableViewCell" customModule="SoulCloudiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="zPh-Ye-B6b">
+                        <rect key="frame" x="8" y="9" width="66" height="81.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="zPh-Ye-B6b" secondAttribute="height" multiplier="13:16" id="P7h-2L-IYV"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cs2-eC-THl">
+                        <rect key="frame" x="82" y="9" width="230" height="24"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Название книги">
+                                <attributes>
+                                    <font key="NSFont" metaFont="system" size="20"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Содержание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8F-Yh-eDR">
+                        <rect key="frame" x="82" y="69.5" width="214" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Автор книги" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZs-3P-iuP">
+                        <rect key="frame" x="82" y="36" width="214" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="zPh-Ye-B6b" secondAttribute="bottom" constant="9" id="5LQ-3u-Rkc"/>
+                    <constraint firstItem="o8F-Yh-eDR" firstAttribute="leading" secondItem="zPh-Ye-B6b" secondAttribute="trailing" constant="8" id="IMa-mt-ktI"/>
+                    <constraint firstItem="RZs-3P-iuP" firstAttribute="leading" secondItem="zPh-Ye-B6b" secondAttribute="trailing" constant="8" id="Km4-2X-OjB"/>
+                    <constraint firstItem="zPh-Ye-B6b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="bCi-74-dP5"/>
+                    <constraint firstItem="Cs2-eC-THl" firstAttribute="top" secondItem="zPh-Ye-B6b" secondAttribute="top" id="mEZ-Tm-tMj"/>
+                    <constraint firstAttribute="trailing" secondItem="Cs2-eC-THl" secondAttribute="trailing" constant="8" id="pTz-wG-jgS"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="o8F-Yh-eDR" secondAttribute="trailing" constant="8" id="qHb-sQ-NYm"/>
+                    <constraint firstItem="Cs2-eC-THl" firstAttribute="leading" secondItem="zPh-Ye-B6b" secondAttribute="trailing" constant="8" id="sci-bb-FVO"/>
+                    <constraint firstItem="zPh-Ye-B6b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="sdz-Uo-VqI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="RZs-3P-iuP" secondAttribute="trailing" constant="8" id="smD-Sa-1VQ"/>
+                    <constraint firstItem="RZs-3P-iuP" firstAttribute="top" secondItem="Cs2-eC-THl" secondAttribute="bottom" constant="3.5" id="tXm-Gl-Ldq"/>
+                    <constraint firstItem="o8F-Yh-eDR" firstAttribute="bottom" secondItem="zPh-Ye-B6b" secondAttribute="bottom" id="ugp-fJ-PTp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bookAuthor" destination="RZs-3P-iuP" id="e12-u7-xUV"/>
+                <outlet property="bookContent" destination="o8F-Yh-eDR" id="LpZ-mf-0yo"/>
+                <outlet property="bookImage" destination="zPh-Ye-B6b" id="5m4-F1-uFb"/>
+                <outlet property="bookName" destination="Cs2-eC-THl" id="1Ca-c2-LbI"/>
+            </connections>
+            <point key="canvasLocation" x="-416" y="60"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Background" width="375" height="666"/>
+    </resources>
+</document>

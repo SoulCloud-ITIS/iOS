@@ -22,8 +22,6 @@ class ApiManager {
         let httpBody = "email=\(email)&password=\(password)"
         request.httpBody = httpBody.data(using: .utf8)
         
-    
-        
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             
@@ -67,6 +65,7 @@ class ApiManager {
                     guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return }
                     guard let answerStatus = json["success"] as? Bool else { return }
                     guard let token = json["message"] as? String else { return }
+                    print(token)
                     completionBlock(token, answerStatus)
     
                     print(json)
@@ -76,6 +75,28 @@ class ApiManager {
             }.resume()
         }
     
+    func loadingOfBooks(comlitionBlock: @escaping ([Book]) -> ()){
+        guard let url = URL(string: "https://soul-cloud-api.herokuapp.com/books/\(userToken)") else { return }
+        
+        let session = URLSession.shared
+        session.dataTask(with: url) { (data, response, error) in
+    
+            if  (error != nil ) {
+                print("Error: \(String(describing: error?.localizedDescription))")
+            } else {
+                guard let data = data else { return }
+                let dataString = String(data: data, encoding: .utf8)
+                print(dataString)
+                do {
+                    let booksDictionary = try JSONDecoder().decode([Book].self, from: data)
+                    print("Data \(String(describing: booksDictionary))")
+                    comlitionBlock(booksDictionary)
+                } catch let errorMessage {
+                     print(errorMessage.localizedDescription)
+                }
+                
+            }
+        }.resume()
     func addGenreToUser(with genreId: Int, completionBlock: @escaping (Int,String,Bool) -> ()) {
         guard let url = URL(string: "https://soul-cloud-api.herokuapp.com/genres/\(genreId)/\(userToken)") else { return }
         var request = URLRequest(url: url)
