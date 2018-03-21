@@ -27,6 +27,7 @@
 		95AD84562061AD2700318396 /* GenresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD84552061AD2700318396 /* GenresTableViewCell.swift */; };
 		95AD84622062FD6700318396 /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95AD84602062FD6700318396 /* BookTableViewCell.xib */; };
 		95AD84632062FD6700318396 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD84612062FD6700318396 /* BookTableViewCell.swift */; };
+		95AD8465206310CD00318396 /* TableBackgroundUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD8464206310CD00318396 /* TableBackgroundUIView.swift */; };
 		FFB0E4262061ABDE00ABA83C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0E4252061ABDE00ABA83C /* Book.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		95AD84552061AD2700318396 /* GenresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresTableViewCell.swift; sourceTree = "<group>"; };
 		95AD84602062FD6700318396 /* BookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
 		95AD84612062FD6700318396 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		95AD8464206310CD00318396 /* TableBackgroundUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBackgroundUIView.swift; sourceTree = "<group>"; };
 		A25F070CDEF00FDDEE9BD724 /* Pods-SoulCloudiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulCloudiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoulCloudiOS/Pods-SoulCloudiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A4E99C34268527FFD359AF90 /* Pods_SoulCloudiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoulCloudiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB0E4252061ABDE00ABA83C /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				95AD845020616E4300318396 /* AlertFactory */,
 				95AD842020604B2F00318396 /* AppStoryboards.swift */,
+				95AD8464206310CD00318396 /* TableBackgroundUIView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				95AD8428206054F100318396 /* NewViewController.swift in Sources */,
 				FFB0E4262061ABDE00ABA83C /* Book.swift in Sources */,
 				95AD842320604B4C00318396 /* ViewControllerInitiateExtension.swift in Sources */,
+				95AD8465206310CD00318396 /* TableBackgroundUIView.swift in Sources */,
 				95AD84562061AD2700318396 /* GenresTableViewCell.swift in Sources */,
 				95AD842A206054FC00318396 /* ForYouViewController.swift in Sources */,
 				953C6C4E205EB6BA00BF24A4 /* RegistrationViewController.swift in Sources */,
