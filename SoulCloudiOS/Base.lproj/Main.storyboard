@@ -267,6 +267,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Pus-rJ-3Jf" id="sVb-II-HQk"/>
+                        <outlet property="viewForTableView" destination="cHs-ms-rFx" id="gDQ-6h-Jtq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwm-YM-Dyn" userLabel="First Responder" sceneMemberID="firstResponder"/>

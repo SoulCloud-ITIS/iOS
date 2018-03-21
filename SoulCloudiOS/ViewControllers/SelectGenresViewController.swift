@@ -22,16 +22,36 @@ class SelectGenresViewController: UIViewController, UITableViewDelegate, UITable
     let errorTitle = "Ошибка"
     let errorMessage = "Выберите минимум 2 жанра"
 
+    @IBOutlet weak var viewForTableView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setShadows()
+        roundCorners()
         alertFactory = AlertFactory()
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
         showAnimate()
+        
 
     }
+    
+    //MARK: - Set shadows
+    
+    func setShadows() {
+        viewForTableView.layer.cornerRadius = self.viewForTableView.frame.width / 20
+        self.tableView.layer.cornerRadius = self.tableView.frame.width / 20
+    }
+    
+    //MARK: - Round corners
+    
+    func roundCorners() {
+        viewForTableView.layer.shadowColor = UIColor.black.cgColor
+        viewForTableView.layer.shadowOpacity = 1
+        viewForTableView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        viewForTableView.layer.shadowRadius = 10
+    }
+    
     
     //MARK: - ConfirmButton
     @IBAction func confirmButtonPressed(_ sender: UIButton) {
