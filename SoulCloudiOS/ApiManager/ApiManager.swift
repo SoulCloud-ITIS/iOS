@@ -97,6 +97,8 @@ class ApiManager {
                 
             }
         }.resume()
+    }
+        
     func addGenreToUser(with genreId: Int, completionBlock: @escaping (Int,String,Bool) -> ()) {
         guard let url = URL(string: "https://soul-cloud-api.herokuapp.com/genres/\(genreId)/\(userToken)") else { return }
         var request = URLRequest(url: url)
@@ -123,5 +125,5 @@ class ApiManager {
                 print(errorMessage2.localizedDescription)
             }
             }.resume()
+        }
     }
-}

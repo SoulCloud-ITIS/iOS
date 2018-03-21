@@ -15,6 +15,6 @@ struct Book: Codable {
     let author: String
     let description: String
     let mark: Bool
-    //let image: UIImage?
+    let url: String?
     
 }
