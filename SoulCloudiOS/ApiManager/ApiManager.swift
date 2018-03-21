@@ -42,28 +42,6 @@ class ApiManager {
                 print(error)
             }
         }.resume()
-            
-//            if error != nil {
-//
-//                print("Error: \(String(describing: error?.localizedDescription))")
-//
-//            } else {
-//
-//                guard let data = data else { return }
-//
-//                do {
-//                    guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return }
-//                    //guard let fixedJson = json["response"] as? [[String: Any]] else { return }
-//                    if let answerStatus = json["success"] as? Bool {
-//
-//                        completionBlock(answerStatus)
-//                    }
-//                    print(json)
-//                } catch let errorMessage2 {
-//                    print(errorMessage2.localizedDescription)
-//                }
-//            }
-//        }.resume()
     }
     
     func loginUser(with email: String, and password: String, completionBlock: @escaping (String,Bool) -> ()) {
@@ -119,5 +97,31 @@ class ApiManager {
                 
             }
         }.resume()
+    func addGenreToUser(with genreId: Int, completionBlock: @escaping (Int,String,Bool) -> ()) {
+        guard let url = URL(string: "https://soul-cloud-api.herokuapp.com/genres/\(genreId)/\(userToken)") else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            
+            if let response = response {
+                print(response)
+            }
+            
+            guard let data = data else { return }
+            
+            do {
+                guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return }
+                guard let answerStatus = json["success"] as? Bool else { return }
+                guard let message = json["message"] as? String else { return }
+                guard let error = json["error_code"] as? Int else { return }
+                completionBlock(error, message, answerStatus)
+                
+                print(json)
+            } catch let errorMessage2 {
+                print(errorMessage2.localizedDescription)
+            }
+            }.resume()
     }
 }
