@@ -29,13 +29,36 @@ class ForYouViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         self.tableView.addSubview(self.refreshControl)
         registerCell()
-        getRecomendedBookByGenres()
-
+        getBooks()
+        
+    }
+    
+    func getBooks() {
+        ApiManager.instance.checkUsersBook { (isAddedBooks) in
+            if isAddedBooks == false {
+                self.getRecomendedBookByGenres()
+            } else {
+                self.getRecomendedBookByAI()
+            }
+        }
     }
     
     func getRecomendedBookByGenres() {
         books.removeAll()
         ApiManager.instance.getRecomendedBookByGenres { (currentBooks) in
+            for book in currentBooks {
+                let newBook = Book(id: book.id, name: book.name, author: book.author, description: book.description, mark: book.mark, url: book.url)
+                self.books.append(newBook)
+            }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    func getRecomendedBookByAI() {
+        books.removeAll()
+        ApiManager.instance.getRecomendedBookByAI { (currentBooks) in
             for book in currentBooks {
                 let newBook = Book(id: book.id, name: book.name, author: book.author, description: book.description, mark: book.mark, url: book.url)
                 self.books.append(newBook)
@@ -68,7 +91,6 @@ class ForYouViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let test = backgroundView as! TableBackgroundUIView
             test.delegate = self
             tableView.backgroundView = test
-
             tableView.separatorStyle = .none
         }
         return numOfSections

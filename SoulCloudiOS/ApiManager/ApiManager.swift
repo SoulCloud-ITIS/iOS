@@ -148,6 +148,57 @@ class ApiManager {
                 }
                 
             }
-            }.resume()
+        }.resume()
+    }
+    
+    func getRecomendedBookByAI(completionBlock: @escaping ([Book]) -> ()) {
+        guard let url = URL(string: "https://soul-cloud-api.herokuapp.com/books/recommended/\(userToken)") else { return }
+        
+        let session = URLSession.shared
+        session.dataTask(with: url) { (data, response, error) in
+            
+            if  (error != nil ) {
+                print("Error: \(String(describing: error?.localizedDescription))")
+            } else {
+                guard let data = data else { return }
+                let dataString = String(data: data, encoding: .utf8)
+                print(dataString)
+                do {
+                    let booksDictionary = try JSONDecoder().decode([Book].self, from: data)
+                    print("Data \(String(describing: booksDictionary))")
+                    completionBlock(booksDictionary)
+                } catch let errorMessage {
+                    print(errorMessage.localizedDescription)
+                }
+                
+            }
+        }.resume()
+    }
+    
+    func checkUsersBook(completionBlock: @escaping (Bool) -> ()) {
+        guard let url = URL(string: "https://soul-cloud-api.herokuapp.com/books/\(userToken)") else { return }
+        
+        let session = URLSession.shared
+        session.dataTask(with: url) { (data, response, error) in
+            
+            if  (error != nil ) {
+                print("Error: \(String(describing: error?.localizedDescription))")
+            } else {
+                guard let data = data else { return }
+                let dataString = String(data: data, encoding: .utf8)
+                print(dataString)
+                do {
+                    let booksDictionary = try JSONDecoder().decode([Book].self, from: data)
+                    print("Data \(String(describing: booksDictionary))")
+                    if booksDictionary.isEmpty {
+                        completionBlock(false)
+                    } else {
+                        completionBlock(true)
+                    }
+                } catch let errorMessage {
+                    print(errorMessage.localizedDescription)
+                }
+            }
+        }.resume()
     }
 }

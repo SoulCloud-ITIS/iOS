@@ -322,9 +322,9 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pea-my-o3R">
-                            <rect key="frame" x="104" y="38" width="114" height="52"/>
+                            <rect key="frame" x="24" y="38" width="274" height="52"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <state key="normal" title="Select genres"/>
+                            <state key="normal" title="Select genres for recomendations"/>
                             <connections>
                                 <action selector="buttonTapped:" destination="c22-GR-MBN" eventType="touchUpInside" id="BTb-5E-fvY"/>
                             </connections>
@@ -333,14 +333,14 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="ofB-P0-vvI" firstAttribute="bottom" secondItem="pea-my-o3R" secondAttribute="bottom" constant="38" id="20t-jP-cVc"/>
-                        <constraint firstItem="pea-my-o3R" firstAttribute="leading" secondItem="ofB-P0-vvI" secondAttribute="leading" constant="104" id="9gT-j1-Xes"/>
-                        <constraint firstItem="ofB-P0-vvI" firstAttribute="trailing" secondItem="pea-my-o3R" secondAttribute="trailing" constant="104" id="Ybn-7m-Ggz"/>
+                        <constraint firstItem="pea-my-o3R" firstAttribute="leading" secondItem="ofB-P0-vvI" secondAttribute="leading" constant="24" id="Drb-sc-OYj"/>
+                        <constraint firstItem="ofB-P0-vvI" firstAttribute="trailing" secondItem="pea-my-o3R" secondAttribute="trailing" constant="24" id="Ybn-7m-Ggz"/>
                         <constraint firstItem="pea-my-o3R" firstAttribute="top" secondItem="ofB-P0-vvI" secondAttribute="top" constant="38" id="m4V-6g-Q9U"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="ofB-P0-vvI"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="3938" y="1038"/>
+            <point key="canvasLocation" x="3938" y="885"/>
         </scene>
         <!--Book-->
         <scene sceneID="7Nk-Ak-UUr">
