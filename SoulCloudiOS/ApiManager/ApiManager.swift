@@ -201,4 +201,60 @@ class ApiManager {
             }
         }.resume()
     }
+    
+    func getAllBooks(from page: Int, and comlitionBlock: @escaping ([Book]) -> ()){
+        guard let url = URL(string: "https://soul-cloud-api.herokuapp.com/books/\(page)") else { return }
+        
+        let session = URLSession.shared
+        session.dataTask(with: url) { (data, response, error) in
+            
+            if  (error != nil ) {
+                print("Error: \(String(describing: error?.localizedDescription))")
+            } else {
+                guard let data = data else { return }
+                let dataString = String(data: data, encoding: .utf8)
+                print(dataString)
+                do {
+                    let booksDictionary = try JSONDecoder().decode([Book].self, from: data)
+                    print("Data \(String(describing: booksDictionary))")
+                    comlitionBlock(booksDictionary)
+                } catch let errorMessage {
+                    print(errorMessage.localizedDescription)
+                }
+                
+            }
+            }.resume()
+    }
+    
+    func getBooksByPartOfNameOrAuthor(with partOfBook: String, comlitionBlock: @escaping ([Book]) -> ()){
+        
+        let baseUrl : String = "https://soul-cloud-api.herokuapp.com/books/search/1/"
+        let  name : String = partOfBook
+        let encodedName = name.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        let finalUrl = baseUrl + encodedName!
+        
+        guard let url = URL(string: finalUrl) else { return }
+        
+        let session = URLSession.shared
+        session.dataTask(with: url) { (data, response, error) in
+            
+            if  (error != nil ) {
+                print("Error: \(String(describing: error?.localizedDescription))")
+            } else {
+                guard let data = data else { return }
+                let dataString = String(data: data, encoding: .utf8)
+                print(dataString)
+                do {
+                    let booksDictionary = try JSONDecoder().decode([Book].self, from: data)
+                    print("Data \(String(describing: booksDictionary))")
+                    comlitionBlock(booksDictionary)
+                } catch let errorMessage {
+                    print(errorMessage.localizedDescription)
+                }
+                
+            }
+            }.resume()
+    }
+    
+    
 }
