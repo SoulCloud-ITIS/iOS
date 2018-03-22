@@ -40,6 +40,9 @@ class ForYouViewController: UIViewController, UITableViewDelegate, UITableViewDa
             } else {
                 self.getRecomendedBookByAI()
             }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
