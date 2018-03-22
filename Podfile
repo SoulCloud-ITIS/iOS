@@ -7,5 +7,6 @@ target 'SoulCloudiOS' do
 
   # Pods for SoulCloudiOS
 pod 'BEMCheckBox'
+pod 'SDWebImage/WebP'
 
 end

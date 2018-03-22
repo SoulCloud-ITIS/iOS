@@ -6,7 +6,9 @@
 //  Copyright © 2018 BLVCK. All rights reserved.
 //
 
+import Foundation
 import UIKit
+import SDWebImage
 
 class BookTableViewCell: UITableViewCell {
 
