@@ -129,7 +129,7 @@ class ForYouViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //MARK - Action for pull to refresh
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         
-        getRecomendedBookByGenres()
+        getBooks()
         refreshControl.endRefreshing()
     }
 }
