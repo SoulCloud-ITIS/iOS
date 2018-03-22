@@ -267,6 +267,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Pus-rJ-3Jf" id="sVb-II-HQk"/>
+                        <outlet property="viewForTableView" destination="cHs-ms-rFx" id="gDQ-6h-Jtq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwm-YM-Dyn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -276,18 +277,70 @@
         <!--For You-->
         <scene sceneID="P6E-qg-wxD">
             <objects>
-                <viewController title="For You" id="ZEA-7n-rwS" sceneMemberID="viewController">
+                <viewController title="For You" id="ZEA-7n-rwS" customClass="ForYouViewController" customModule="SoulCloudiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c6b-9r-Pqr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cu0-yu-3lH">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recomendationCell" id="T2j-Ry-FyW">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T2j-Ry-FyW" id="Y5j-6e-GB6">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZEA-7n-rwS" id="VDV-XO-MQC"/>
+                                    <outlet property="delegate" destination="ZEA-7n-rwS" id="GHm-D1-pU9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cu0-yu-3lH" firstAttribute="top" secondItem="G5E-q2-flS" secondAttribute="top" id="EnT-ki-T0p"/>
+                            <constraint firstItem="cu0-yu-3lH" firstAttribute="bottom" secondItem="G5E-q2-flS" secondAttribute="bottom" id="Pc0-Tc-MuJ"/>
+                            <constraint firstItem="cu0-yu-3lH" firstAttribute="leading" secondItem="G5E-q2-flS" secondAttribute="leading" id="qGP-nV-8Js"/>
+                            <constraint firstItem="cu0-yu-3lH" firstAttribute="trailing" secondItem="G5E-q2-flS" secondAttribute="trailing" id="r7u-AS-1Ve"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="G5E-q2-flS"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="For You" id="gG8-Cf-W9x"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="c22-GR-MBN" id="H5h-Jk-evf"/>
+                        <outlet property="tableView" destination="cu0-yu-3lH" id="6YC-4F-lrh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bY1-Rb-5qQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="c22-GR-MBN" customClass="TableBackgroundUIView" customModule="SoulCloudiOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="322" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pea-my-o3R">
+                            <rect key="frame" x="24" y="38" width="274" height="52"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Select genres for recomendations"/>
+                            <connections>
+                                <action selector="buttonTapped:" destination="c22-GR-MBN" eventType="touchUpInside" id="BTb-5E-fvY"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ofB-P0-vvI" firstAttribute="bottom" secondItem="pea-my-o3R" secondAttribute="bottom" constant="38" id="20t-jP-cVc"/>
+                        <constraint firstItem="pea-my-o3R" firstAttribute="leading" secondItem="ofB-P0-vvI" secondAttribute="leading" constant="24" id="Drb-sc-OYj"/>
+                        <constraint firstItem="ofB-P0-vvI" firstAttribute="trailing" secondItem="pea-my-o3R" secondAttribute="trailing" constant="24" id="Ybn-7m-Ggz"/>
+                        <constraint firstItem="pea-my-o3R" firstAttribute="top" secondItem="ofB-P0-vvI" secondAttribute="top" constant="38" id="m4V-6g-Q9U"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="ofB-P0-vvI"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="3938" y="731"/>
+            <point key="canvasLocation" x="3938" y="885"/>
         </scene>
         <!--Book-->
         <scene sceneID="7Nk-Ak-UUr">

@@ -14,7 +14,7 @@ struct Book: Codable {
     let name: String
     let author: String
     let description: String
-    let mark: Bool
+    let mark: Bool?
     let url: String?
     
 }
