@@ -14,11 +14,28 @@ class NewViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     let bookCellIdentifier = "allBooksCell"
     var books = [Book]()
     var pageCount = 1
+    var resultSearchController:UISearchController? = nil
   
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
         getBooks()
+        
+        
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let bookSearchTable = storyboard.instantiateViewController(withIdentifier: "SearchBookTableIdentifier") as! SearchBookTableViewController
+        resultSearchController = UISearchController(searchResultsController: bookSearchTable)
+        resultSearchController?.searchResultsUpdater = bookSearchTable
+        
+        let searchBar = resultSearchController!.searchBar
+        searchBar.sizeToFit()
+        searchBar.placeholder = "Search for books"
+        navigationItem.titleView = resultSearchController?.searchBar
+        
+        
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        resultSearchController?.dimsBackgroundDuringPresentation = true
+        definesPresentationContext = true
         
     }
     

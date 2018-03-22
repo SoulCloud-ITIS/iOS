@@ -30,7 +30,6 @@ class ForYouViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView.addSubview(self.refreshControl)
         registerCell()
         getBooks()
-        
     }
     
     func getBooks() {
