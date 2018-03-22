@@ -16,9 +16,20 @@ class BookViewController: UIViewController, UITableViewDelegate, UITableViewData
     let bookCellIdentifier = "bookCell"
     var books = [Book]()
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(self.handleRefresh(_:)),
+                                 for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor.red
+        
+        return refreshControl
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getBooks()
+        self.tableView.addSubview(self.refreshControl)
         self.tableView.rowHeight = 100
         registerCell()
     }
@@ -77,6 +88,11 @@ class BookViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    
+    //MARK - Action for pull to refresh
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        
+        getBooks()
+        refreshControl.endRefreshing()
+    }
     
 }
