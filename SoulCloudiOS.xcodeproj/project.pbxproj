@@ -176,6 +176,8 @@
 		95AD84572061AD2C00318396 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				95AD84592062F11C00318396 /* BookTableViewCell.swift */,
+				95AD84582062F11C00318396 /* BookTableViewCell.xib */,
 				95AD84552061AD2700318396 /* GenresTableViewCell.swift */,
 				95AD84612062FD6700318396 /* BookTableViewCell.swift */,
 				95AD84602062FD6700318396 /* BookTableViewCell.xib */,
