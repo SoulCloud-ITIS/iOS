@@ -541,6 +541,8 @@
                         <segue destination="eH1-XI-tqU" kind="relationship" relationship="viewControllers" id="JkO-Aq-RAm"/>
                         <segue destination="lHz-8A-CQh" kind="relationship" relationship="viewControllers" id="RfO-7o-w6T"/>
                         <segue destination="21n-TG-9Z5" kind="relationship" relationship="viewControllers" id="n7P-kW-rkz"/>
+                        <segue destination="ad7-4K-mlw" kind="relationship" relationship="viewControllers" id="dUq-ov-FoB"/>
+                        <segue destination="sv7-MB-dWu" kind="relationship" relationship="viewControllers" id="7IW-qu-IBN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E9Y-EB-CLG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -584,6 +586,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8CJ-nV-rC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3653" y="884"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Mu9-EL-VOK">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="ad7-4K-mlw" customClass="ViewController" customModule="SoulCloudiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IJP-lf-51J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zsr-Gr-lSm"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="iMP-54-1zD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8a-WV-E2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3653" y="2077"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="4sy-LU-9Sa">
+            <objects>
+                <viewController id="sv7-MB-dWu" customClass="ShpionViewController" customModule="SoulCloudiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w7c-pE-v73">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4QO-HZ-Orb">
+                                <rect key="frame" x="64" y="220" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="34T-Sq-yg7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="7Zm-r2-ThE"/>
+                    <connections>
+                        <outlet property="cameraPreview" destination="4QO-HZ-Orb" id="dvq-bg-fpd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JRI-29-KD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3653" y="2899"/>
         </scene>
         <!--Book-->
         <scene sceneID="OMQ-pw-a9U">

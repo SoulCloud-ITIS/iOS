@@ -28,16 +28,28 @@ PODS:
   - SDWebImage/WebP (4.3.3):
     - libwebp (~> 0.5)
     - SDWebImage/Core
+  - VisionLab (0.2.0)
 
 DEPENDENCIES:
   - BEMCheckBox
   - SDWebImage/WebP
+  - VisionLab (from `https://github.com/cocoa-ai/VisionLab`)
+
+EXTERNAL SOURCES:
+  VisionLab:
+    :git: https://github.com/cocoa-ai/VisionLab
+
+CHECKOUT OPTIONS:
+  VisionLab:
+    :commit: c865a12b66ededa0bd76c23c456a172a0dd7aba4
+    :git: https://github.com/cocoa-ai/VisionLab
 
 SPEC CHECKSUMS:
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   libwebp: 1d5a07c2eb97f9c31bd5f154bb82efc0ea67c6a2
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  VisionLab: 6fc2dcc1f731dd21891c7bd9878a93c0526bfc91
 
-PODFILE CHECKSUM: 5e7f9ad88fe00c4c6a528314545cbb04ebab96be
+PODFILE CHECKSUM: cf4eb568927b127302a3768aba638aedec3df223
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

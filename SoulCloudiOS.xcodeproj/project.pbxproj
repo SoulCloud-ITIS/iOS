@@ -29,6 +29,14 @@
 		95AD84632062FD6700318396 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD84612062FD6700318396 /* BookTableViewCell.swift */; };
 		95AD8465206310CD00318396 /* TableBackgroundUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD8464206310CD00318396 /* TableBackgroundUIView.swift */; };
 		95B5FC9C206435A9001CB56F /* SearchBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5FC9B206435A9001CB56F /* SearchBookTableViewController.swift */; };
+		FF1706222076DB30009C7288 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF17061B2076DB2F009C7288 /* LaunchScreen.storyboard */; };
+		FF1706232076DB30009C7288 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FF17061C2076DB2F009C7288 /* MobileNet.mlmodel */; };
+		FF1706252076DB30009C7288 /* AgeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FF17061E2076DB2F009C7288 /* AgeNet.mlmodel */; };
+		FF1706262076DB30009C7288 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FF17061F2076DB2F009C7288 /* CNNEmotions.mlmodel */; };
+		FF1706282076DB30009C7288 /* GenderNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FF1706212076DB2F009C7288 /* GenderNet.mlmodel */; };
+		FF1706312076DC58009C7288 /* ClassificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF17062F2076DC58009C7288 /* ClassificationService.swift */; };
+		FF1706322076DC58009C7288 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1706302076DC58009C7288 /* ViewController.swift */; };
+		FF1706342076E608009C7288 /* ShpionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1706332076E608009C7288 /* ShpionViewController.swift */; };
 		FFB0E4262061ABDE00ABA83C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0E4252061ABDE00ABA83C /* Book.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +67,14 @@
 		95B5FC9B206435A9001CB56F /* SearchBookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchBookTableViewController.swift; path = SoulCloudiOS/ViewControllers/SearchBookTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		A25F070CDEF00FDDEE9BD724 /* Pods-SoulCloudiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulCloudiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoulCloudiOS/Pods-SoulCloudiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A4E99C34268527FFD359AF90 /* Pods_SoulCloudiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoulCloudiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF17061B2076DB2F009C7288 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FF17061C2076DB2F009C7288 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		FF17061E2076DB2F009C7288 /* AgeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AgeNet.mlmodel; sourceTree = "<group>"; };
+		FF17061F2076DB2F009C7288 /* CNNEmotions.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CNNEmotions.mlmodel; sourceTree = "<group>"; };
+		FF1706212076DB2F009C7288 /* GenderNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GenderNet.mlmodel; sourceTree = "<group>"; };
+		FF17062F2076DC58009C7288 /* ClassificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationService.swift; sourceTree = "<group>"; };
+		FF1706302076DC58009C7288 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF1706332076E608009C7288 /* ShpionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShpionViewController.swift; sourceTree = "<group>"; };
 		FFB0E4252061ABDE00ABA83C /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +119,7 @@
 		953C6C36205E585200BF24A4 /* SoulCloudiOS */ = {
 			isa = PBXGroup;
 			children = (
+				FF17061A2076DB2F009C7288 /* Resources */,
 				FFB0E4242061ABC600ABA83C /* Entities */,
 				95AD84572061AD2C00318396 /* TableViewCells */,
 				95AD841F20604AEA00318396 /* Helpers */,
@@ -160,9 +177,12 @@
 		95AD8424206054D000318396 /* TabBarControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FF17062F2076DC58009C7288 /* ClassificationService.swift */,
+				FF1706302076DC58009C7288 /* ViewController.swift */,
 				95AD8425206054EA00318396 /* BookViewController.swift */,
 				95AD8427206054F100318396 /* NewViewController.swift */,
 				95AD8429206054FC00318396 /* ForYouViewController.swift */,
+				FF1706332076E608009C7288 /* ShpionViewController.swift */,
 			);
 			path = TabBarControllers;
 			sourceTree = "<group>";
@@ -193,6 +213,18 @@
 				6978F1802D5137A7F4774EC8 /* Pods-SoulCloudiOS.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF17061A2076DB2F009C7288 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FF17061B2076DB2F009C7288 /* LaunchScreen.storyboard */,
+				FF17061C2076DB2F009C7288 /* MobileNet.mlmodel */,
+				FF17061E2076DB2F009C7288 /* AgeNet.mlmodel */,
+				FF17061F2076DB2F009C7288 /* CNNEmotions.mlmodel */,
+				FF1706212076DB2F009C7288 /* GenderNet.mlmodel */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		FFB0E4242061ABC600ABA83C /* Entities */ = {
@@ -268,6 +300,7 @@
 				95AD84622062FD6700318396 /* BookTableViewCell.xib in Resources */,
 				953C6C42205E585200BF24A4 /* LaunchScreen.storyboard in Resources */,
 				953C6C3F205E585200BF24A4 /* Assets.xcassets in Resources */,
+				FF1706222076DB30009C7288 /* LaunchScreen.storyboard in Resources */,
 				953C6C3D205E585200BF24A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,12 +335,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SoulCloudiOS/Pods-SoulCloudiOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/VisionLab/VisionLab.framework",
 				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisionLab.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,13 +377,20 @@
 				953C6C4C205EB6AA00BF24A4 /* LoginViewController.swift in Sources */,
 				953C6C38205E585200BF24A4 /* AppDelegate.swift in Sources */,
 				95AD842120604B2F00318396 /* AppStoryboards.swift in Sources */,
+				FF1706342076E608009C7288 /* ShpionViewController.swift in Sources */,
 				95AD845220616E6100318396 /* AlertFactoryProtocol.swift in Sources */,
+				FF1706322076DC58009C7288 /* ViewController.swift in Sources */,
+				FF1706312076DC58009C7288 /* ClassificationService.swift in Sources */,
+				FF1706252076DB30009C7288 /* AgeNet.mlmodel in Sources */,
 				953C6C4A205EB67300BF24A4 /* StartViewController.swift in Sources */,
 				953C6C50205EBC6E00BF24A4 /* ApiManager.swift in Sources */,
 				95AD844E206169EB00318396 /* SelectGenresViewController.swift in Sources */,
 				95AD8426206054EA00318396 /* BookViewController.swift in Sources */,
 				95AD8428206054F100318396 /* NewViewController.swift in Sources */,
+				FF1706262076DB30009C7288 /* CNNEmotions.mlmodel in Sources */,
+				FF1706232076DB30009C7288 /* MobileNet.mlmodel in Sources */,
 				FFB0E4262061ABDE00ABA83C /* Book.swift in Sources */,
+				FF1706282076DB30009C7288 /* GenderNet.mlmodel in Sources */,
 				95AD842320604B4C00318396 /* ViewControllerInitiateExtension.swift in Sources */,
 				95AD8465206310CD00318396 /* TableBackgroundUIView.swift in Sources */,
 				95B5FC9C206435A9001CB56F /* SearchBookTableViewController.swift in Sources */,
@@ -493,10 +535,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77843YCLH4;
+				DEVELOPMENT_TEAM = 8423GK8E47;
 				INFOPLIST_FILE = SoulCloudiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blvvvck.SoulCloudiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blvvvck.SoulCloudiOS123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -509,10 +551,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77843YCLH4;
+				DEVELOPMENT_TEAM = 8423GK8E47;
 				INFOPLIST_FILE = SoulCloudiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blvvvck.SoulCloudiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blvvvck.SoulCloudiOS123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
